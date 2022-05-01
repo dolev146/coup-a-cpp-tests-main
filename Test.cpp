@@ -41,11 +41,11 @@ TEST_SUITE("checking that functions doesnt throw exceptions")
 
 		// check that we can get the players
 
-		CHECK_NOTHROW_MESSAGE(board.vec(), "playes work");
-		CHECK_NOTHROW_MESSAGE(board.vec(), "playes work");
-		CHECK_NOTHROW_MESSAGE(board.vec(), "playes work");
-		CHECK_NOTHROW_MESSAGE(board.vec(), "playes work");
-		CHECK_NOTHROW_MESSAGE(board.vec(), "playes work");
+		CHECK_NOTHROW_MESSAGE(board.players(), "playes work");
+		CHECK_NOTHROW_MESSAGE(board.players(), "playes work");
+		CHECK_NOTHROW_MESSAGE(board.players(), "playes work");
+		CHECK_NOTHROW_MESSAGE(board.players(), "playes work");
+		CHECK_NOTHROW_MESSAGE(board.players(), "playes work");
 		CHECK_NOTHROW_MESSAGE(board.turn(), "turn work");
 		CHECK_NOTHROW_MESSAGE(duke.income(), "income work");
 		CHECK_NOTHROW_MESSAGE(assassin.income(), "income work");
@@ -73,12 +73,12 @@ TEST_SUITE("checking game rulse ")
 		CHECK_EQ(ambassador.coins(), 0);
 
 		CHECK_EQ(board.turn(), "Moshe");
-		CHECK_EQ(board.vec().size(), 5);
-		CHECK_EQ(board.vec()[0], "Moshe");
-		CHECK_EQ(board.vec()[1], "Yossi");
-		CHECK_EQ(board.vec()[2], "Meirav");
-		CHECK_EQ(board.vec()[3], "Reut");
-		CHECK_EQ(board.vec()[4], "Gilad");
+		CHECK_EQ(board.players().size(), 5);
+		CHECK_EQ(board.players()[0], "Moshe");
+		CHECK_EQ(board.players()[1], "Yossi");
+		CHECK_EQ(board.players()[2], "Meirav");
+		CHECK_EQ(board.players()[3], "Reut");
+		CHECK_EQ(board.players()[4], "Gilad");
 		CHECK_EQ(duke.income(), 2);
 		CHECK_EQ(assassin.income(), 2);
 		CHECK_EQ(ambassador.income(), 2);
@@ -93,7 +93,6 @@ TEST_SUITE("checking game rulse ")
 		CHECK_EQ(board.turn(), "Gilad");
 		CHECK_EQ(contessa.coins(), 4);
 		
-
 
 	}
 }

@@ -13,9 +13,9 @@ namespace coup
     {
     private:
     public:
-        vector<string> list_of_playes;
+        vector<string> playersList;
         unsigned int i;
-        vector<string> vec();
+        vector<string> players();
         string turn();
         string winner();
     };
