@@ -8,6 +8,7 @@ namespace coup
 
     int Player::income()
     {
+        return 0;
     }
     void Player::foreign_aid()
     {
