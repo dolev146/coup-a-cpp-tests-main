@@ -55,44 +55,39 @@ TEST_SUITE("checking that functions doesnt throw exceptions")
 	}
 }
 
-TEST_SUITE("checking game rulse ")
+TEST_CASE("check the game rules")
 {
-	TEST_CASE("check the game rules")
-	{
-		coup::Game board{};
-		coup::Duke duke{board, "Moshe"};
-		coup::Assassin assassin{board, "Yossi"};
-		coup::Ambassador ambassador{board, "Meirav"};
-		coup::Captain captain{board, "Reut"};
-		coup::Contessa contessa{board, "Gilad"};
+	coup::Game board{};
+	coup::Duke duke{board, "Moshe"};
+	coup::Assassin assassin{board, "Yossi"};
+	coup::Ambassador ambassador{board, "Meirav"};
+	coup::Captain captain{board, "Reut"};
+	coup::Contessa contessa{board, "Gilad"};
 
-		CHECK_EQ(captain.coins(), 0);
-		CHECK_EQ(contessa.coins(), 0);
-		CHECK_EQ(duke.coins(), 0);
-		CHECK_EQ(assassin.coins(), 0);
-		CHECK_EQ(ambassador.coins(), 0);
+	CHECK_EQ(captain.coins(), 0);
+	CHECK_EQ(contessa.coins(), 0);
+	CHECK_EQ(duke.coins(), 0);
+	CHECK_EQ(assassin.coins(), 0);
+	CHECK_EQ(ambassador.coins(), 0);
 
-		CHECK_EQ(board.turn(), "Moshe");
-		CHECK_EQ(board.players().size(), 5);
-		CHECK_EQ(board.players()[0], "Moshe");
-		CHECK_EQ(board.players()[1], "Yossi");
-		CHECK_EQ(board.players()[2], "Meirav");
-		CHECK_EQ(board.players()[3], "Reut");
-		CHECK_EQ(board.players()[4], "Gilad");
-		// CHECK_EQ(duke.income(), 2);
-		// CHECK_EQ(assassin.income(), 2);
-		// CHECK_EQ(ambassador.income(), 2);
-		// CHECK_EQ(captain.income(), 2);
-		// CHECK_EQ(contessa.income(), 2);
-		// CHECK_EQ(board.turn(), "Yossi");
-		// CHECK_EQ(assassin.income(), 4);
-		// CHECK_EQ(board.turn(), "Meirav");
-		// CHECK_EQ(ambassador.coins(), 4);
-		// CHECK_EQ(board.turn(), "Reut");
-		// CHECK_EQ(captain.coins(), 4);
-		// CHECK_EQ(board.turn(), "Gilad");
-		// CHECK_EQ(contessa.coins(), 4);
-		
-
-	}
+	CHECK_EQ(board.turn(), "Moshe");
+	CHECK_EQ(board.players().size(), 5);
+	// CHECK_EQ(board.players()[0], "Moshe");
+	// CHECK_EQ(board.players()[1], "Yossi");
+	// CHECK_EQ(board.players()[2], "Meirav");
+	// CHECK_EQ(board.players()[3], "Reut");
+	// CHECK_EQ(board.players()[4], "Gilad");
+	CHECK_EQ(duke.income(), 2);
+	CHECK_EQ(assassin.income(), 2);
+	CHECK_EQ(ambassador.income(), 2);
+	CHECK_EQ(captain.income(), 2);
+	CHECK_EQ(contessa.income(), 2);
+	CHECK_EQ(board.turn(), "Yossi");
+	CHECK_EQ(assassin.income(), 4);
+	CHECK_EQ(board.turn(), "Meirav");
+	CHECK_EQ(ambassador.coins(), 4);
+	CHECK_EQ(board.turn(), "Reut");
+	CHECK_EQ(captain.coins(), 4);
+	CHECK_EQ(board.turn(), "Gilad");
+	CHECK_EQ(contessa.coins(), 4);
 }
