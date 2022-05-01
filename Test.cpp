@@ -72,11 +72,6 @@ TEST_CASE("check the game rules")
 
 	CHECK_EQ(board.turn(), "Moshe");
 	CHECK_EQ(board.players().size(), 5);
-	// CHECK_EQ(board.players()[0], "Moshe");
-	// CHECK_EQ(board.players()[1], "Yossi");
-	// CHECK_EQ(board.players()[2], "Meirav");
-	// CHECK_EQ(board.players()[3], "Reut");
-	// CHECK_EQ(board.players()[4], "Gilad");
 	CHECK_EQ(duke.income(), 2);
 	CHECK_EQ(assassin.income(), 2);
 	CHECK_EQ(ambassador.income(), 2);
